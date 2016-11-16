@@ -65,7 +65,7 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 		}
 	}
 
-	add_action( 'wp_enqueue_scripts', array( 'UCF_Footer_Common', 'enqueue_styles' ) );
+	add_action( 'wp_enqueue_scripts', array( 'UCF_Footer_Common', 'enqueue_styles' ), 99 );
 	add_action( 'wp_footer', array( 'UCF_Footer_Common', 'display_footer' ) );
 
 }

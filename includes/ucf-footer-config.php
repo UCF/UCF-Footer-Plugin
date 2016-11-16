@@ -9,8 +9,9 @@ if ( !class_exists( 'UCF_Footer_Config' ) ) {
 		public static
 			$option_prefix = 'ucf_footer_',
 			$option_defaults = array(
-				'title'                => 'Footer',
-				'include_css'          => true,
+				'include_css'     => true,
+				'social_menu_url' => 'http://www.ucf.edu/wp-json/ucf-rest-menus/v1/menus/50',
+				'nav_menu_url'    => 'http://www.ucf.edu/wp-json/ucf-rest-menus/v1/menus/48'
 			);
 
 		/**
@@ -23,6 +24,8 @@ if ( !class_exists( 'UCF_Footer_Config' ) ) {
 			$defaults = self::$option_defaults; // don't use self::get_option_defaults() here (default options haven't been set yet)
 
 			add_option( self::$option_prefix . 'include_css', $defaults['include_css'] );
+			add_option( self::$option_prefix . 'social_menu_url', $defaults['social_menu_url'] );
+			add_option( self::$option_prefix . 'nav_menu_url', $defaults['nav_menu_url'] );
 		}
 
 		/**
@@ -33,6 +36,8 @@ if ( !class_exists( 'UCF_Footer_Config' ) ) {
 		 **/
 		public static function delete_options() {
 			delete_option( self::$option_prefix . 'include_css' );
+			delete_option( self::$option_prefix . 'social_menu_url' );
+			delete_option( self::$option_prefix . 'nav_menu_url' );
 		}
 
 		/**
@@ -46,7 +51,9 @@ if ( !class_exists( 'UCF_Footer_Config' ) ) {
 
 			// Apply default values configurable within the options page:
 			$configurable_defaults = array(
-				'include_css' => get_option( self::$option_prefix . 'include_css' ),
+				'include_css'     => get_option( self::$option_prefix . 'include_css' ),
+				'social_menu_url' => get_option( self::$option_prefix . 'social_menu_url' ),
+				'nav_menu_url'    => get_option( self::$option_prefix . 'nav_menu_url' ),
 			);
 
 			$configurable_defaults = self::format_options( $configurable_defaults );
@@ -129,6 +136,8 @@ if ( !class_exists( 'UCF_Footer_Config' ) ) {
 		public static function settings_init() {
 			// Register settings
 			register_setting( 'ucf_footer', self::$option_prefix . 'include_css' );
+			register_setting( 'ucf_footer', self::$option_prefix . 'social_menu_url' );
+			register_setting( 'ucf_footer', self::$option_prefix . 'nav_menu_url' );
 
 			// Register setting sections
 			add_settings_section(
@@ -149,6 +158,30 @@ if ( !class_exists( 'UCF_Footer_Config' ) ) {
 					'label_for'   => self::$option_prefix . 'include_css',
 					'description' => 'Register the stylesheet for the UCF footer styles in the document head for this theme.<br>Leave this checkbox checked unless your theme contains a copy of the footer styles in its stylesheet.',
 					'type'        => 'checkbox'
+				)
+			);
+			add_settings_field(
+				self::$option_prefix . 'social_menu_url',
+				'Social Link Menu Feed URL',  // formatted field title
+				array( 'UCF_Footer_Config', 'display_settings_field' ),  // display callback
+				'ucf_footer',  // settings page slug
+				'ucf_footer_section_general',  // option section slug
+				array(  // extra arguments to pass to the callback function
+					'label_for'   => self::$option_prefix . 'social_menu_url',
+					'description' => 'URL to the WP Rest API representation of the ucf.edu social link menu.',
+					'type'        => 'text'
+				)
+			);
+			add_settings_field(
+				self::$option_prefix . 'nav_menu_url',
+				'Footer Navigation Menu Feed URL',  // formatted field title
+				array( 'UCF_Footer_Config', 'display_settings_field' ),  // display callback
+				'ucf_footer',  // settings page slug
+				'ucf_footer_section_general',  // option section slug
+				array(  // extra arguments to pass to the callback function
+					'label_for'   => self::$option_prefix . 'nav_menu_url',
+					'description' => 'URL to the WP Rest API representation of the ucf.edu footer navigation menu.',
+					'type'        => 'text'
 				)
 			);
 		}
@@ -175,6 +208,7 @@ if ( !class_exists( 'UCF_Footer_Config' ) ) {
 					$markup = ob_get_clean();
 					break;
 
+				case 'text':
 				default:
 					ob_start();
 				?>

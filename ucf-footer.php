@@ -14,6 +14,7 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'UCF_FOOTER__PLUGIN_FILE', __FILE__ );
 
 require_once 'includes/ucf-footer-config.php';
+require_once 'includes/ucf-footer-feed.php';
 require_once 'includes/ucf-footer-common.php';
 
 

@@ -1,0 +1,100 @@
+.ucf-footer-nav,
+.ucf-footer-social {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ucf-footer-nav-item,
+.ucf-footer-social-item {
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.ucf-footer {
+  background-color: #3e3e3e;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  font-family: "Gotham SSm 3r","Gotham SSm A","Gotham SSm B","Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  padding: 30px 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.ucf-footer-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+@media (min-width:768px) {
+  .ucf-footer {
+    padding: 60px;
+  }
+
+  .ucf-footer-title {
+    font-size: 22px;
+  }
+}
+
+.ucf-footer-social {
+  margin-bottom: 14px;
+}
+
+.ucf-footer-social-link {
+  display: none;
+  height: 32px;
+  text-indent: -150%;
+  width: 32px;
+}
+
+.ucf-footer-social-link[href*=facebook],
+.ucf-footer-social-link[href*=twitter],
+.ucf-footer-social-link[href*=youtube],
+.ucf-footer-social-link[href*="plus.google"],
+.ucf-footer-social-link[href*="ucf.edu/social"],
+.ucf-footer-social-link[href*=linkedin] {
+  display: block;
+}
+
+.ucf-footer-nav-item {
+  border-right: 1px solid #fff;
+  font-size: 10px;
+  font-weight: 300;
+  padding-left: .6em;
+  padding-right: 1em;
+}
+
+@media (min-width:768px) {
+  .ucf-footer-nav-item {
+    font-size: 12px;
+  }
+}
+
+.ucf-footer-nav-item:last-child {
+  border-right: 0 solid transparent;
+}
+
+.ucf-footer-nav-link {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.ucf-footer-nav-link,
+.ucf-footer-nav-link:active,
+.ucf-footer-nav-link:focus,
+.ucf-footer-nav-link:hover {
+  color: #fff;
+}
+
+.ucf-footer-nav-link:active,
+.ucf-footer-nav-link:focus,
+.ucf-footer-nav-link:hover {
+  text-decoration: underline;
+}

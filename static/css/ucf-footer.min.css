@@ -14,14 +14,24 @@
 .ucf-footer {
   background-color: #3e3e3e;
   box-sizing: border-box;
-  color: #fff;
   display: block;
-  font-family: "Gotham SSm 3r","Gotham SSm A","Gotham SSm B","Helvetica Neue",Helvetica,Arial,sans-serif;
-  line-height: 1.4;
   margin: 0;
   padding: 30px 15px;
   text-align: center;
   width: 100%;
+}
+
+.ucf-footer a,
+.ucf-footer li,
+.ucf-footer ol,
+.ucf-footer p,
+.ucf-footer span,
+.ucf-footer ul {
+  color: #fff;
+  font-family: "Gotham SSm 3r","Gotham SSm A","Gotham SSm B","Helvetica Neue",Helvetica,Arial,sans-serif;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  line-height: 1.4;
 }
 
 .ucf-footer-title {
@@ -81,20 +91,20 @@
   border-right: 0 solid transparent;
 }
 
-.ucf-footer-nav-link {
+a.ucf-footer-nav-link {
   font-size: inherit;
   font-weight: inherit;
 }
 
-.ucf-footer-nav-link,
-.ucf-footer-nav-link:active,
-.ucf-footer-nav-link:focus,
-.ucf-footer-nav-link:hover {
+a.ucf-footer-nav-link,
+a.ucf-footer-nav-link:active,
+a.ucf-footer-nav-link:focus,
+a.ucf-footer-nav-link:hover {
   color: #fff;
 }
 
-.ucf-footer-nav-link:active,
-.ucf-footer-nav-link:focus,
-.ucf-footer-nav-link:hover {
+a.ucf-footer-nav-link:active,
+a.ucf-footer-nav-link:focus,
+a.ucf-footer-nav-link:hover {
   text-decoration: underline;
 }

@@ -15,13 +15,15 @@ $ucf-footer-font-family: 'Gotham SSm 3r', 'Gotham SSm A', 'Gotham SSm B', 'Helve
 }
 
 
+// NOTE: overqualified selectors are intentionally added to help override
+// greedy theme stylesheets as much as possible.
+//
+// scss-lint:disable QualifyingElement
+
 .ucf-footer {
   background-color: $ucf-footer-gray;
   box-sizing: border-box;
-  color: $ucf-footer-white;
   display: block;
-  font-family: $ucf-footer-font-family;
-  line-height: 1.4;
   margin: 0;
   padding: 30px 15px;
   text-align: center;
@@ -29,6 +31,20 @@ $ucf-footer-font-family: 'Gotham SSm 3r', 'Gotham SSm A', 'Gotham SSm B', 'Helve
 
   @media (min-width: 768px) {
     padding: 60px;
+  }
+
+  // Greedy greedy greedy!
+  a,
+  span,
+  p,
+  ol,
+  ul,
+  li {
+    color: $ucf-footer-white;
+    font-family: $ucf-footer-font-family;
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+    line-height: 1.4;
   }
 }
 
@@ -106,7 +122,7 @@ $ucf-footer-font-family: 'Gotham SSm 3r', 'Gotham SSm A', 'Gotham SSm B', 'Helve
   }
 }
 
-.ucf-footer-nav-link {
+a.ucf-footer-nav-link {
   font-size: inherit;
   font-weight: inherit;
 
@@ -123,3 +139,5 @@ $ucf-footer-font-family: 'Gotham SSm 3r', 'Gotham SSm A', 'Gotham SSm B', 'Helve
     text-decoration: underline;
   }
 }
+
+// scss-lint:enable QualifyingElement

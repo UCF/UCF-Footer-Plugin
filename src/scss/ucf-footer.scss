@@ -71,33 +71,80 @@ $ucf-footer-font-family: 'Gotham SSm 3r', 'Gotham SSm A', 'Gotham SSm B', 'Helve
 }
 
 .ucf-footer-social-link {
+  background-image: url('../img/social-links-gray.svg');
+  background-repeat: no-repeat;
+  background-size: 206px 66px;
   display: none;  // hide links that we don't have an icon for
-  height: 32px;
-  text-indent: -150%;
-  width: 32px;
+  height: 33px;
+  margin: 0 4px;
+  overflow: hidden;
+  text-indent: 100%;
+  width: 34px;
 
   &[href*="facebook"] {
+    background-position: 0 0;
     display: block;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-position: 0 100%;
+    }
   }
 
   &[href*="twitter"] {
+    background-position: -34px 0;
     display: block;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-position: -34px 100%;
+    }
   }
 
   &[href*="youtube"] {
+    background-position: -172px 0;
     display: block;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-position: -172px 100%;
+    }
   }
 
   &[href*="plus.google"] {
+    background-position: -103px 0;
     display: block;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-position: -103px 100%;
+    }
   }
 
   &[href*="ucf.edu/social"] {
+    background-position: -69px 0;
     display: block;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-position: -69px 100%;
+    }
   }
 
   &[href*="linkedin"] {
+    background-position: -138px 0;
     display: block;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-position: -138px 100%;
+    }
   }
 }
 

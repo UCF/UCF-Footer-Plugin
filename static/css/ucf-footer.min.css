@@ -58,19 +58,81 @@
 }
 
 .ucf-footer-social-link {
+  background-image: url(../img/social-links-gray.svg);
+  background-repeat: no-repeat;
+  background-size: 206px 66px;
   display: none;
-  height: 32px;
-  text-indent: -150%;
-  width: 32px;
+  height: 33px;
+  margin: 0 4px;
+  overflow: hidden;
+  text-indent: 100%;
+  width: 34px;
 }
 
-.ucf-footer-social-link[href*=facebook],
-.ucf-footer-social-link[href*=twitter],
-.ucf-footer-social-link[href*=youtube],
-.ucf-footer-social-link[href*="plus.google"],
-.ucf-footer-social-link[href*="ucf.edu/social"],
-.ucf-footer-social-link[href*=linkedin] {
+.ucf-footer-social-link[href*=facebook] {
+  background-position: 0 0;
   display: block;
+}
+
+.ucf-footer-social-link[href*=facebook]:active,
+.ucf-footer-social-link[href*=facebook]:focus,
+.ucf-footer-social-link[href*=facebook]:hover {
+  background-position: 0 100%;
+}
+
+.ucf-footer-social-link[href*=twitter] {
+  background-position: -34px 0;
+  display: block;
+}
+
+.ucf-footer-social-link[href*=twitter]:active,
+.ucf-footer-social-link[href*=twitter]:focus,
+.ucf-footer-social-link[href*=twitter]:hover {
+  background-position: -34px 100%;
+}
+
+.ucf-footer-social-link[href*=youtube] {
+  background-position: -172px 0;
+  display: block;
+}
+
+.ucf-footer-social-link[href*=youtube]:active,
+.ucf-footer-social-link[href*=youtube]:focus,
+.ucf-footer-social-link[href*=youtube]:hover {
+  background-position: -172px 100%;
+}
+
+.ucf-footer-social-link[href*="plus.google"] {
+  background-position: -103px 0;
+  display: block;
+}
+
+.ucf-footer-social-link[href*="plus.google"]:active,
+.ucf-footer-social-link[href*="plus.google"]:focus,
+.ucf-footer-social-link[href*="plus.google"]:hover {
+  background-position: -103px 100%;
+}
+
+.ucf-footer-social-link[href*="ucf.edu/social"] {
+  background-position: -69px 0;
+  display: block;
+}
+
+.ucf-footer-social-link[href*="ucf.edu/social"]:active,
+.ucf-footer-social-link[href*="ucf.edu/social"]:focus,
+.ucf-footer-social-link[href*="ucf.edu/social"]:hover {
+  background-position: -69px 100%;
+}
+
+.ucf-footer-social-link[href*=linkedin] {
+  background-position: -138px 0;
+  display: block;
+}
+
+.ucf-footer-social-link[href*=linkedin]:active,
+.ucf-footer-social-link[href*=linkedin]:focus,
+.ucf-footer-social-link[href*=linkedin]:hover {
+  background-position: -138px 100%;
 }
 
 .ucf-footer-nav-item {

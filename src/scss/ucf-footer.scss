@@ -1,6 +1,7 @@
 $ucf-footer-gray:  #3e3e3e;
 $ucf-footer-white: #fff;
 $ucf-footer-font-family: 'Gotham SSm 3r', 'Gotham SSm A', 'Gotham SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
 
 
 %ucf-footer-inline-list {
@@ -71,7 +72,7 @@ $ucf-footer-font-family: 'Gotham SSm 3r', 'Gotham SSm A', 'Gotham SSm B', 'Helve
 }
 
 .ucf-footer-social-link {
-  background-image: url('../img/social-links-gray.svg');
+  background-image: url($ucf-footer-social-icons);
   background-repeat: no-repeat;
   background-size: 206px 66px;
   display: none;  // hide links that we don't have an icon for

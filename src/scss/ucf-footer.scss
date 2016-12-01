@@ -45,7 +45,6 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
     font-family: $ucf-footer-font-family;
     -moz-osx-font-smoothing: auto;
     -webkit-font-smoothing: auto;
-    line-height: 1.4;
   }
 }
 
@@ -54,11 +53,24 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 3px;
+  line-height: 1.4;
   margin-bottom: 12px;
   text-transform: uppercase;
 
   @media (min-width: 768px) {
     font-size: 22px;
+  }
+}
+
+.ucf-footer-address {
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 0;
+  margin-top: 25px;
+
+  @media (min-width: 768px) {
+    font-size: 12px;
   }
 }
 
@@ -77,6 +89,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
   background-size: 206px 66px;
   display: none;  // hide links that we don't have an icon for
   height: 33px;
+  line-height: 1.4;
   margin: 0 4px;
   overflow: hidden;
   text-indent: 100%;
@@ -158,6 +171,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
   border-right: 1px solid $ucf-footer-white;
   font-size: 10px;
   font-weight: 300;
+  line-height: 1.4;
   padding-left: .6em;
   padding-right: 1em;
 

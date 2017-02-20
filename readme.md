@@ -17,6 +17,10 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 ## Changelog ##
 
+### 1.0.1 ###
+* Bug Fixes:
+  * Upadtes the way the menu feeds are pulled to avoid problems when the feed domain is external.
+
 ### 1.0.0 ###
 * Initial release
 

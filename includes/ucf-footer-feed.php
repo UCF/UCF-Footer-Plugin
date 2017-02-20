@@ -14,7 +14,7 @@ if ( ! class_exists( 'UCF_Footer_Feed' ) ) {
 
 			if ( empty( $result ) || $customizing ) {
 
-				$response = wp_safe_remote_get( $feed_url, array( 'timeout' => 15 ) );
+				$response = wp_remote_get( $feed_url, array( 'timeout' => 15 ) );
 
 				if ( is_array( $response ) ) {
 					$result = json_decode( wp_remote_retrieve_body( $response ) );

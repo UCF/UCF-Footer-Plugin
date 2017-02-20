@@ -3,7 +3,7 @@ Contributors: ucfwebcom
 Tags: ucf, footer, template
 Requires at least: 4.5.3
 Tested up to: 4.5.3
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/copyleft/gpl-3.0.html
 
@@ -23,6 +23,10 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 
 == Changelog ==
+
+= 1.0.1 =
+* Bug Fixes:
+  * Upadtes the way the menu feeds are pulled to avoid problems when the feed domain is external.
 
 = 1.0.0 =
 * Initial release

@@ -53,6 +53,8 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 		}
 
 		public function display_footer() {
+			$display = apply_filters( 'ucf_footer_display_footer' );
+			if ( $display ) :
 			ob_start();
 		?>
 			<div class="ucf-footer">
@@ -67,10 +69,19 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 			</div>
 		<?php
 			echo ob_get_clean();
+			endif;
 		}
 	}
 
 	add_action( 'wp_enqueue_scripts', array( 'UCF_Footer_Common', 'enqueue_styles' ), 99 );
 	add_action( 'wp_footer', array( 'UCF_Footer_Common', 'display_footer' ) );
 
+}
+
+if ( ! function_exists( 'ucf_footer_display_footer' ) ) {
+	function ucf_footer_display_footer() {
+		return true;
+	}
+
+	add_filter( 'ucf_footer_display_footer', 'ucf_footer_display_footer' );
 }

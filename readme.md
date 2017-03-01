@@ -17,6 +17,10 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 ## Changelog ##
 
+### 1.0.2 ###
+* Enhancements:
+    * Added `ucf_footer_display_footer` filter which allows logic to be implemented for when to display the footer.
+
 ### 1.0.1 ###
 * Bug Fixes:
   * Upadtes the way the menu feeds are pulled to avoid problems when the feed domain is external.

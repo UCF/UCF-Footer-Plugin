@@ -3,7 +3,7 @@ Contributors: ucfwebcom
 Tags: ucf, footer, template
 Requires at least: 4.5.3
 Tested up to: 4.5.3
-Stable tag: 1.0.1
+Stable tag: 1.0.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/copyleft/gpl-3.0.html
 
@@ -24,13 +24,19 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 == Changelog ==
 
+= 1.0.3 =
+* Bug Fixes:
+  * Fixed warning due to missing argument in `apply_filters()` in `UCF_Footer_Common::display_footer()`
+  * Updated methods in `UCF_Footer_Common` to be static
+  * Updated `.ucf-footer` to be a semantic footer element
+
 = 1.0.2 =
 * Enhancements:
     * Added `ucf_footer_display_footer` filter which allows logic to be implemented for when to display the footer.
 
 = 1.0.1 =
 * Bug Fixes:
-  * Upadtes the way the menu feeds are pulled to avoid problems when the feed domain is external.
+  * Updates the way the menu feeds are pulled to avoid problems when the feed domain is external.
 
 = 1.0.0 =
 * Initial release

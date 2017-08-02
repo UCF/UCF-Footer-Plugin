@@ -6,7 +6,7 @@
 if ( !class_exists( 'UCF_Footer_Common' ) ) {
 
 	class UCF_Footer_Common {
-		public function enqueue_styles() {
+		public static function enqueue_styles() {
 			$include_css = UCF_Footer_Config::get_option_or_default( 'include_css' );
 
 			if ( $include_css ) {
@@ -14,7 +14,7 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 			}
 		}
 
-		public function display_social_links() {
+		public static function display_social_links() {
 			$menu = UCF_Footer_Feed::get_remote_menu( 'social_menu_url' );
 			if ( !$menu ) { return; }
 
@@ -33,7 +33,7 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 			return ob_get_clean();
 		}
 
-		public function display_nav_links() {
+		public static function display_nav_links() {
 			$menu = UCF_Footer_Feed::get_remote_menu( 'nav_menu_url' );
 			if ( !$menu ) { return; }
 
@@ -52,7 +52,7 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 			return ob_get_clean();
 		}
 
-		public function display_footer() {
+		public static function display_footer() {
 			$display = apply_filters( 'ucf_footer_display_footer', true );
 			if ( $display ) :
 			ob_start();

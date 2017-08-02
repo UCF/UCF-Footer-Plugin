@@ -53,7 +53,7 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 		}
 
 		public function display_footer() {
-			$display = apply_filters( 'ucf_footer_display_footer' );
+			$display = apply_filters( 'ucf_footer_display_footer', true );
 			if ( $display ) :
 			ob_start();
 		?>

@@ -57,7 +57,7 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 			if ( $display ) :
 			ob_start();
 		?>
-			<div class="ucf-footer">
+			<footer class="ucf-footer">
 				<a class="ucf-footer-title" href="http://www.ucf.edu/">University of Central Florida</a>
 				<?php echo self::display_social_links(); ?>
 				<?php echo self::display_nav_links(); ?>
@@ -66,7 +66,7 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 					<br>
 					&copy; <a href="http://www.ucf.edu/">University of Central Florida</a>
 				</p>
-			</div>
+			</footer>
 		<?php
 			echo ob_get_clean();
 			endif;

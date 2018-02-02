@@ -62,7 +62,7 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 				<?php echo self::display_social_links(); ?>
 				<?php echo self::display_nav_links(); ?>
 				<p class="ucf-footer-address">
-					4000 Central Florida Blvd. Orlando, Florida, 32816 | <a href="tel:4078232000">407.823.2000</a>
+					4000 Central Florida Blvd. Orlando, Florida, 32816 | <a rel="nofollow" href="tel:4078232000">407.823.2000</a>
 					<br>
 					&copy; <a href="https://www.ucf.edu/">University of Central Florida</a>
 				</p>

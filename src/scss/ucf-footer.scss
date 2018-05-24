@@ -1,6 +1,6 @@
 $ucf-footer-gray:  #3e3e3e;
 $ucf-footer-white: #fff;
-$ucf-footer-font-family: 'Gotham SSm 3r', 'Gotham SSm A', 'Gotham SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ucf-footer-font-family: 'Gotham SSm A', 'Gotham SSm B', 'UCF Sans Serif Alt', 'Helvetica Neue', Arial, sans-serif;
 $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
 
 
@@ -51,7 +51,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
 .ucf-footer-title {
   display: block;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 3px;
   line-height: 1.4;
   margin-bottom: 12px;
@@ -64,7 +64,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
 
 .ucf-footer-address {
   font-size: 10px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.8;
   margin-bottom: 0;
   margin-top: 25px;
@@ -170,7 +170,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
   @extend %ucf-footer-inline-item;
   border-right: 1px solid $ucf-footer-white;
   font-size: 10px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.4;
   padding-left: .6em;
   padding-right: 1em;
@@ -200,6 +200,10 @@ a.ucf-footer-nav-link {
   &:focus {
     text-decoration: underline;
   }
+}
+
+a.ucf-footer-underline-link {
+  text-decoration: underline;
 }
 
 // scss-lint:enable QualifyingElement

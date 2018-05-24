@@ -58,13 +58,13 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 			ob_start();
 		?>
 			<footer class="ucf-footer">
-				<a class="ucf-footer-title" href="http://www.ucf.edu/">University of Central Florida</a>
+				<a class="ucf-footer-title" href="https://www.ucf.edu/">University of Central Florida</a>
 				<?php echo self::display_social_links(); ?>
 				<?php echo self::display_nav_links(); ?>
 				<p class="ucf-footer-address">
-					4000 Central Florida Blvd. Orlando, Florida, 32816 | <a class="ucf-footer-underline-link" href="tel:4078232000">407.823.2000</a>
+					4000 Central Florida Blvd. Orlando, Florida, 32816 | <a rel="nofollow" class="ucf-footer-underline-link" href="tel:4078232000">407.823.2000</a>
 					<br>
-					&copy; <a class="ucf-footer-underline-link" href="http://www.ucf.edu/">University of Central Florida</a>
+					&copy; <a class="ucf-footer-underline-link" href="https://www.ucf.edu/">University of Central Florida</a>
 				</p>
 			</footer>
 		<?php

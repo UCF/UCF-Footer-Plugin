@@ -3,7 +3,7 @@ Contributors: ucfwebcom
 Tags: ucf, footer, template
 Requires at least: 4.5.3
 Tested up to: 4.5.3
-Stable tag: 1.0.3
+Stable tag: 1.0.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/copyleft/gpl-3.0.html
 
@@ -23,6 +23,18 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 
 == Changelog ==
+
+= 1.0.5 =
+* Bug Fixes:
+  * Updated default social/footer menu URLs
+  * Updated footer font stack to work with sites utilizing the Athena Framework without premium webfonts
+* Enhancements:
+  * Added underlines to links surrounding the address text for contrast/distinguish-ability as links
+
+= 1.0.4 =
+* Enhancements:
+  * Updated ucf.edu links to point to https
+  * Added nofollow to telephone link
 
 = 1.0.3 =
 * Bug Fixes:

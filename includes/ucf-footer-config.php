@@ -10,8 +10,8 @@ if ( !class_exists( 'UCF_Footer_Config' ) ) {
 			$option_prefix = 'ucf_footer_',
 			$option_defaults = array(
 				'include_css'     => true,
-				'social_menu_url' => 'http://www.ucf.edu/wp-json/ucf-rest-menus/v1/menus/50',
-				'nav_menu_url'    => 'http://www.ucf.edu/wp-json/ucf-rest-menus/v1/menus/48'
+				'social_menu_url' => 'https://www.ucf.edu/wp-json/ucf-rest-menus/v1/menus/26',
+				'nav_menu_url'    => 'https://www.ucf.edu/wp-json/ucf-rest-menus/v1/menus/24'
 			);
 
 		/**

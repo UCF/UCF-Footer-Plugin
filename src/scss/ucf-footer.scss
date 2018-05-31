@@ -86,7 +86,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
 .ucf-footer-social-link {
   background-image: url($ucf-footer-social-icons);
   background-repeat: no-repeat;
-  background-size: 206px 66px;
+  background-size: 240px 66px;
   display: none;  // hide links that we don't have an icon for
   height: 33px;
   line-height: 1.4;
@@ -158,6 +158,17 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
     &:active,
     &:focus {
       background-position: -138px 100%;
+    }
+  }
+
+  &[href*="instagram"] {
+    background-position: -206px 0;
+    display: block;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-position: -206px 100%;
     }
   }
 }

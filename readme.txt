@@ -1,9 +1,9 @@
 === UCF Footer Plugin ===
 Contributors: ucfwebcom
 Tags: ucf, footer, template
-Requires at least: 4.5.3
+Requires at least: 4.9.6
 Tested up to: 4.5.3
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv3 or later
 License URI: http://www.gnu.org/copyleft/gpl-3.0.html
 
@@ -23,6 +23,10 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 
 == Changelog ==
+
+= 1.0.6 =
+* Enhancements:
+  * Added instagram logo for the social menu in the footer
 
 = 1.0.5 =
 * Bug Fixes:

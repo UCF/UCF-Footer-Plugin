@@ -17,6 +17,10 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 ## Changelog ##
 
+### 1.0.6 ###
+* Enhancements:
+  * Added instagram logo for the social menu in the footer
+
 ### 1.0.5 ###
 * Bug Fixes:
   * Updated default social/footer menu URLs

@@ -128,17 +128,6 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
     }
   }
 
-  &[href*='plus.google'] {
-    background-position: -103px 0;
-    display: block;
-
-    &:hover,
-    &:active,
-    &:focus {
-      background-position: -103px 100%;
-    }
-  }
-
   &[href*='ucf.edu/social'] {
     background-position: -69px 0;
     display: block;

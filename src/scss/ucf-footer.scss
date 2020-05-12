@@ -19,7 +19,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
 // NOTE: overqualified selectors are intentionally added to help override
 // greedy theme stylesheets as much as possible.
 //
-// scss-lint:disable QualifyingElement
+// sass-lint:disable no-qualifying-elements
 
 .ucf-footer {
   background-color: $ucf-footer-gray;
@@ -41,10 +41,10 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
   ol,
   ul,
   li {
+    -moz-osx-font-smoothing: auto; // sass-lint:disable-line no-vendor-prefixes
+    -webkit-font-smoothing: auto; // sass-lint:disable-line no-vendor-prefixes
     color: $ucf-footer-white;
     font-family: $ucf-footer-font-family;
-    -moz-osx-font-smoothing: auto;
-    -webkit-font-smoothing: auto;
   }
 }
 
@@ -95,7 +95,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
   text-indent: 100%;
   width: 34px;
 
-  &[href*="facebook"] {
+  &[href*='facebook'] {
     background-position: 0 0;
     display: block;
 
@@ -106,7 +106,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
     }
   }
 
-  &[href*="twitter"] {
+  &[href*='twitter'] {
     background-position: -34px 0;
     display: block;
 
@@ -117,7 +117,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
     }
   }
 
-  &[href*="youtube"] {
+  &[href*='youtube'] {
     background-position: -172px 0;
     display: block;
 
@@ -128,18 +128,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
     }
   }
 
-  &[href*="plus.google"] {
-    background-position: -103px 0;
-    display: block;
-
-    &:hover,
-    &:active,
-    &:focus {
-      background-position: -103px 100%;
-    }
-  }
-
-  &[href*="ucf.edu/social"] {
+  &[href*='ucf.edu/social'] {
     background-position: -69px 0;
     display: block;
 
@@ -150,7 +139,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
     }
   }
 
-  &[href*="linkedin"] {
+  &[href*='linkedin'] {
     background-position: -138px 0;
     display: block;
 
@@ -161,7 +150,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
     }
   }
 
-  &[href*="instagram"] {
+  &[href*='instagram'] {
     background-position: -206px 0;
     display: block;
 
@@ -217,4 +206,4 @@ a.ucf-footer-underline-link {
   text-decoration: underline;
 }
 
-// scss-lint:enable QualifyingElement
+// sass-lint:enable no-qualifying-elements

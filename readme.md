@@ -16,7 +16,7 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 ### Installation Requirements ###
 * Ensure your activated theme calls `wp_footer()` immediately before the template's closing `<body>` tag.  `wp_footer()` should not be called from within any element with an explicit or max width (the UCF footer should span the full width of the page.)
-* The current activated theme must enqueue the Athena Framework, and/or a Cloud.Typography CSS Key that corresponds to a font project with Gotham ScreenSmart Light enabled.  This plugin does not provide any custom webfonts.
+* The current activated theme must enqueue the Athena Framework, and/or a Cloud.Typography CSS Key that corresponds to a font project with Gotham ScreenSmart Regular enabled.  This plugin does not provide any custom webfonts.
 
 
 ## Changelog ##

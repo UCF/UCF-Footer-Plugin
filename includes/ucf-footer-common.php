@@ -59,7 +59,7 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 			if ( $display ) :
 			ob_start();
 		?>
-			<footer class="ucf-footer">
+			<footer class="ucf-footer" aria-label="University of Central Florida footer">
 				<a class="ucf-footer-title" href="https://www.ucf.edu/">University of Central Florida</a>
 				<?php echo self::display_social_links(); ?>
 				<?php echo self::display_nav_links(); ?>

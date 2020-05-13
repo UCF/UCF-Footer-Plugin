@@ -21,35 +21,43 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 ## Changelog ##
 
+### 1.0.7 ###
+Enhancements:
+* Added cache-busting to the plugin's enqueued stylesheet
+* Added unique `aria-label` value to wrapper `<footer>` element
+* Added linter configs, Github issue/PR templates, and CONTRIBUTING doc to repo
+* Upgraded packages and gulpfile
+
 ### 1.0.6 ###
-* Enhancements:
-  * Added instagram logo for the social menu in the footer
+Enhancements:
+* Added instagram logo for the social menu in the footer
 
 ### 1.0.5 ###
-* Bug Fixes:
-  * Updated default social/footer menu URLs
-  * Updated footer font stack to work with sites utilizing the Athena Framework without premium webfonts
-* Enhancements:
-  * Added underlines to links surrounding the address text for contrast/distinguish-ability as links
+Bug Fixes:
+* Updated default social/footer menu URLs
+* Updated footer font stack to work with sites utilizing the Athena Framework without premium webfonts
+
+Enhancements:
+* Added underlines to links surrounding the address text for contrast/distinguish-ability as links
 
 ### 1.0.4 ###
-* Enhancements:
-  * Updated ucf.edu links to point to https
-  * Added nofollow to telephone link
+Enhancements:
+* Updated ucf.edu links to point to https
+* Added nofollow to telephone link
 
 ### 1.0.3 ###
-* Bug Fixes:
-  * Fixed warning due to missing argument in `apply_filters()` in `UCF_Footer_Common::display_footer()`
-  * Updated methods in `UCF_Footer_Common` to be static
-  * Updated `.ucf-footer` to be a semantic footer element
+Bug Fixes:
+* Fixed warning due to missing argument in `apply_filters()` in `UCF_Footer_Common::display_footer()`
+* Updated methods in `UCF_Footer_Common` to be static
+* Updated `.ucf-footer` to be a semantic footer element
 
 ### 1.0.2 ###
-* Enhancements:
-    * Added `ucf_footer_display_footer` filter which allows logic to be implemented for when to display the footer.
+Enhancements:
+* Added `ucf_footer_display_footer` filter which allows logic to be implemented for when to display the footer.
 
 ### 1.0.1 ###
-* Bug Fixes:
-  * Updates the way the menu feeds are pulled to avoid problems when the feed domain is external.
+Bug Fixes:
+* Updates the way the menu feeds are pulled to avoid problems when the feed domain is external.
 
 ### 1.0.0 ###
 * Initial release

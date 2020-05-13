@@ -10,7 +10,9 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 			$include_css = UCF_Footer_Config::get_option_or_default( 'include_css' );
 
 			if ( $include_css ) {
-				wp_enqueue_style( 'ucf_footer_css', plugins_url( 'static/css/ucf-footer.min.css', UCF_FOOTER__PLUGIN_FILE ), false, false, 'all' );
+				$plugin_data   = get_plugin_data( UCF_FOOTER__PLUGIN_FILE, false, false );
+				$version       = $plugin_data['Version'];
+				wp_enqueue_style( 'ucf_footer_css', plugins_url( 'static/css/ucf-footer.min.css', UCF_FOOTER__PLUGIN_FILE ), false, $version, 'all' );
 			}
 		}
 

@@ -16,6 +16,13 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 			}
 		}
 
+		public static function async_load_styles( $html, $handle, $href, $media ) {
+			if ( $handle === 'ucf_footer_css' ) {
+				$html = str_replace( 'media=\'' . $media . '\'', 'media=\'print\' onload=\'this.media="' . $media . '"\'', $html );
+			}
+			return $html;
+		}
+
 		public static function display_social_links() {
 			$menu = UCF_Footer_Feed::get_remote_menu( 'social_menu_url' );
 			if ( !$menu ) { return; }
@@ -76,6 +83,7 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 	}
 
 	add_action( 'wp_enqueue_scripts', array( 'UCF_Footer_Common', 'enqueue_styles' ), 99 );
+	add_action( 'style_loader_tag', array( 'UCF_Footer_Common', 'async_load_styles' ), 99, 4 );
 	add_action( 'wp_footer', array( 'UCF_Footer_Common', 'display_footer' ) );
 
 }

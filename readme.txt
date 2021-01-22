@@ -3,7 +3,7 @@ Contributors: ucfwebcom
 Tags: ucf, footer, template
 Requires at least: 4.9.6
 Tested up to: 5.3
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 Requires PHP: 5.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/copyleft/gpl-3.0.html
@@ -28,6 +28,11 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 
 == Changelog ==
+
+= 1.0.8 =
+Enhancements:
+* Added asynchonous loading of styles for the footer
+* Upgraded packages
 
 = 1.0.7 =
 Enhancements:

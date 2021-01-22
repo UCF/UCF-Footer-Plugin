@@ -21,6 +21,11 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 ## Changelog ##
 
+### 1.0.8 ###
+Enhancements:
+* Added asynchonous loading of styles for the footer
+* Upgraded packages
+
 ### 1.0.7 ###
 Enhancements:
 * Added cache-busting to the plugin's enqueued stylesheet

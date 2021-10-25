@@ -64,34 +64,79 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 		public static function display_footer() {
 			$display = apply_filters( 'ucf_footer_display_footer', true );
 			if ( $display ) :
-			ob_start();
+				$use_semantic = apply_filters( 'ucf_footer_use_semantic_wrapper', true );
+				$open_tag  = $use_semantic ? '<footer class="ucf-footer" aria-label="University of Central Florida footer">' : '<div class="ucf-footer">';
+				$close_tag = $use_semantic ? '</footer>' : '</div>';
+
+				ob_start();
 		?>
-			<footer class="ucf-footer" aria-label="University of Central Florida footer">
-				<a class="ucf-footer-title" href="https://www.ucf.edu/">University of Central Florida</a>
-				<?php echo self::display_social_links(); ?>
-				<?php echo self::display_nav_links(); ?>
-				<p class="ucf-footer-address">
-					4000 Central Florida Blvd. Orlando, Florida, 32816 | <a rel="nofollow" class="ucf-footer-underline-link" href="tel:4078232000">407.823.2000</a>
-					<br>
-					&copy; <a class="ucf-footer-underline-link" href="https://www.ucf.edu/">University of Central Florida</a>
-				</p>
-			</footer>
+				<?php echo $open_tag; ?>
+					<a class="ucf-footer-title" href="https://www.ucf.edu/">University of Central Florida</a>
+					<?php echo self::display_social_links(); ?>
+					<?php echo self::display_nav_links(); ?>
+					<p class="ucf-footer-address">
+						4000 Central Florida Blvd. Orlando, Florida, 32816 | <a rel="nofollow" class="ucf-footer-underline-link" href="tel:4078232000">407.823.2000</a>
+						<br>
+						&copy; <a class="ucf-footer-underline-link" href="https://www.ucf.edu/">University of Central Florida</a>
+					</p>
+				<?php echo $close_tag; ?>
 		<?php
-			echo ob_get_clean();
+				echo trim( ob_get_clean() );
 			endif;
 		}
 	}
 
 	add_action( 'wp_enqueue_scripts', array( 'UCF_Footer_Common', 'enqueue_styles' ), 99 );
 	add_action( 'style_loader_tag', array( 'UCF_Footer_Common', 'async_load_styles' ), 99, 4 );
-	add_action( 'wp_footer', array( 'UCF_Footer_Common', 'display_footer' ) );
+
+	$display_hook = trim( apply_filters( 'ucf_footer_display_hook_name', 'wp_footer' ) ) ?: 'wp_footer';
+	add_action( $display_hook, array( 'UCF_Footer_Common', 'display_footer' ) );
 
 }
 
+/**
+ * Filter hook that allows themes/plugins to configure if and when
+ * to display the UCF Footer.
+ */
 if ( ! function_exists( 'ucf_footer_display_footer' ) ) {
 	function ucf_footer_display_footer() {
 		return true;
 	}
 
 	add_filter( 'ucf_footer_display_footer', 'ucf_footer_display_footer' );
+}
+
+/**
+ * Filter hook that allows themes to configure if the
+ * UCF Footer contents should be wrapped in a semantic <footer>
+ * or a <div>.
+ *
+ * Themes that use their own semantic <footer> in addition to the
+ * UCF Footer should hook into this filter with `__return_false`
+ * to avoid more than one `contentinfo` landmark from being rendered
+ * on screen at a time.
+ * https://dequeuniversity.com/rules/axe/4.3/landmark-no-duplicate-contentinfo
+ */
+if ( ! function_exists( 'ucf_footer_use_semantic_wrapper' ) ) {
+	function ucf_footer_use_semantic_wrapper() {
+		return true;
+	}
+
+	add_filter( 'ucf_footer_use_semantic_wrapper', 'ucf_footer_use_semantic_wrapper' );
+}
+
+/**
+ * Filter hook that allows themes to modify what action hook
+ * the UCF Header should be displayed with.  By default, the UCF Footer
+ * will be displayed via `wp_footer`.
+ *
+ * Note that the returned value must be an _action_ hook, not a
+ * _filter_ hook.
+ */
+if ( ! function_exists( 'ucf_footer_display_hook_name' ) ) {
+	function ucf_footer_display_hook_name() {
+		return 'wp_footer';
+	}
+
+	add_filter( 'ucf_footer_display_hook_name', 'ucf_footer_display_hook_name' );
 }

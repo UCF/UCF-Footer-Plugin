@@ -86,6 +86,7 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 		}
 	}
 
+	// TODO need to modify when these actions fire to ensure themes can override them!
 	add_action( 'wp_enqueue_scripts', array( 'UCF_Footer_Common', 'enqueue_styles' ), 99 );
 	add_action( 'style_loader_tag', array( 'UCF_Footer_Common', 'async_load_styles' ), 99, 4 );
 
@@ -134,9 +135,9 @@ if ( ! function_exists( 'ucf_footer_use_semantic_wrapper' ) ) {
  * _filter_ hook.
  */
 if ( ! function_exists( 'ucf_footer_display_hook_name' ) ) {
-	function ucf_footer_display_hook_name() {
+	function ucf_footer_display_hook_name( $hook_name ) {
 		return 'wp_footer';
 	}
 
-	add_filter( 'ucf_footer_display_hook_name', 'ucf_footer_display_hook_name' );
+	add_filter( 'ucf_footer_display_hook_name', 'ucf_footer_display_hook_name', 10, 1 );
 }

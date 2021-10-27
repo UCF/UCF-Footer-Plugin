@@ -84,15 +84,23 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 				echo trim( ob_get_clean() );
 			endif;
 		}
+
+		/**
+		 * Registers the UCF Footer display action at the action hook
+		 * provided by the `ucf_footer_display_hook_name` filter.
+		 *
+		 * NOTE: this method must hook into `init` to allow themes to
+		 * override the `ucf_footer_display_hook_name` filter in time.
+		 */
+		public static function add_footer_display_action() {
+			$display_hook = trim( apply_filters( 'ucf_footer_display_hook_name', 'wp_footer' ) ) ?: 'wp_footer';
+			add_action( $display_hook, array( 'UCF_Footer_Common', 'display_footer' ) );
+		}
 	}
 
-	// TODO need to modify when these actions fire to ensure themes can override them!
 	add_action( 'wp_enqueue_scripts', array( 'UCF_Footer_Common', 'enqueue_styles' ), 99 );
 	add_action( 'style_loader_tag', array( 'UCF_Footer_Common', 'async_load_styles' ), 99, 4 );
-
-	$display_hook = trim( apply_filters( 'ucf_footer_display_hook_name', 'wp_footer' ) ) ?: 'wp_footer';
-	add_action( $display_hook, array( 'UCF_Footer_Common', 'display_footer' ) );
-
+	add_action( 'init', array( 'UCF_Footer_Common', 'add_footer_display_action' ) );
 }
 
 /**

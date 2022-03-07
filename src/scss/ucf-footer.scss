@@ -89,10 +89,8 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
   background-size: 240px 66px;
   display: none;  // hide links that we don't have an icon for
   height: 33px;
-  line-height: 1.4;
   margin: 0 4px;
   overflow: hidden;
-  text-indent: 100%;
   width: 34px;
 
   &[href*='facebook'] {

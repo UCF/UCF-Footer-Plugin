@@ -21,6 +21,10 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 ## Changelog ##
 
+### 1.0.9 ###
+Bug fixes:
+* Removed hidden text indent on social icons in favor of using `aria-label`
+
 ### 1.0.8 ###
 Enhancements:
 * Added asynchonous loading of styles for the footer

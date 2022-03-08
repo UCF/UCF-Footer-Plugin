@@ -3,7 +3,7 @@ Contributors: ucfwebcom
 Tags: ucf, footer, template
 Requires at least: 4.9.6
 Tested up to: 5.3
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 Requires PHP: 5.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/copyleft/gpl-3.0.html
@@ -28,6 +28,10 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 
 == Changelog ==
+
+= 1.0.9 =
+Bug fixes:
+* Removed hidden text indent on social icons in favor of using `aria-label`
 
 = 1.0.8 =
 Enhancements:

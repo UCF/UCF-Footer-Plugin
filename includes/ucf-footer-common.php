@@ -32,9 +32,7 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 			<ul class="ucf-footer-social">
 			<?php foreach ( $menu->items as $item ): ?>
 				<li class="ucf-footer-social-item">
-					<a class="ucf-footer-social-link" href="<?php echo $item->url; ?>" target="<?php echo $item->target; ?>">
-						<?php echo $item->title; ?>
-					</a>
+					<a class="ucf-footer-social-link" href="<?php echo $item->url; ?>" target="<?php echo $item->target; ?>" aria-label="<?php echo $item->title; ?>"></a>
 				</li>
 			<?php endforeach; ?>
 			</ul>

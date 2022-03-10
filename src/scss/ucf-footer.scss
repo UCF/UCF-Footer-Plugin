@@ -49,16 +49,23 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
 }
 
 .ucf-footer-title {
-  display: block;
+  display: inline-block;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 1.4;
   margin-bottom: 12px;
+  text-decoration: none;
   text-transform: uppercase;
 
   @media (min-width: 768px) {
     font-size: 22px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
   }
 }
 
@@ -185,6 +192,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
 a.ucf-footer-nav-link {
   font-size: inherit;
   font-weight: inherit;
+  text-decoration: none;
 
   &,
   &:hover,

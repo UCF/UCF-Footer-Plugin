@@ -3,7 +3,7 @@ Contributors: ucfwebcom
 Tags: ucf, footer, template
 Requires at least: 4.9.6
 Tested up to: 5.3
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 Requires PHP: 5.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/copyleft/gpl-3.0.html
@@ -29,9 +29,14 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 == Changelog ==
 
+= 1.0.10 =
+* Explicitly removed underlines on main UCF link and nav menu links to support themes using Athena v1.1.1+ or other themes that enforce underlines on links by default.
+* Set the main "University of Central Florida" link at the top of the footer to be inline-block instead of block level.
+
 = 1.0.9 =
 Bug fixes:
 * Removed hidden text indent on social icons in favor of using `aria-label`
+* Upgraded packages
 
 = 1.0.8 =
 Enhancements:

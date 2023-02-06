@@ -21,6 +21,10 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 ## Changelog ##
 
+### 2.0.0 ###
+Accessibility:
+* Updates font sizes from pixels to rem to more predictably scale text when the screen is zoomed.
+
 ### 1.0.10 ###
 * Explicitly removed underlines on main UCF link and nav menu links to support themes using Athena v1.1.1+ or other themes that enforce underlines on links by default.
 * Set the main "University of Central Florida" link at the top of the footer to be inline-block instead of block level.

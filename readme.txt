@@ -3,7 +3,7 @@ Contributors: ucfwebcom
 Tags: ucf, footer, template
 Requires at least: 4.9.6
 Tested up to: 5.3
-Stable tag: 1.0.10
+Stable tag: 2.0.0
 Requires PHP: 5.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/copyleft/gpl-3.0.html
@@ -28,6 +28,10 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 
 == Changelog ==
+
+= 2.0.0 =
+Accessibility:
+* Updates font sizes from pixels to rem to more predictably scale text when the screen is zoomed.
 
 = 1.0.10 =
 * Explicitly removed underlines on main UCF link and nav menu links to support themes using Athena v1.1.1+ or other themes that enforce underlines on links by default.

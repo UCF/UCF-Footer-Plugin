@@ -2,7 +2,7 @@
   "private": true,
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
-    "browser-sync": "^2.27.7",
+    "browser-sync": "^2.27.11",
     "eslint": "^8.10.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",

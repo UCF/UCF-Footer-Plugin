@@ -50,7 +50,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
 
 .ucf-footer-title {
   display: inline-block;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 1.4;
@@ -59,7 +59,7 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
   text-transform: uppercase;
 
   @media (min-width: 768px) {
-    font-size: 22px;
+    font-size: 1.833rem;
   }
 
   &:hover,
@@ -70,14 +70,14 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
 }
 
 .ucf-footer-address {
-  font-size: 10px;
+  font-size: 0.833rem;
   font-weight: 400;
   line-height: 1.8;
   margin-bottom: 0;
   margin-top: 25px;
 
   @media (min-width: 768px) {
-    font-size: 12px;
+    font-size: .75rem;
   }
 }
 
@@ -174,14 +174,14 @@ $ucf-footer-social-icons: '../img/social-links-gray.svg' !default;
 .ucf-footer-nav-item {
   @extend %ucf-footer-inline-item;
   border-right: 1px solid $ucf-footer-white;
-  font-size: 10px;
+  font-size: 0.833rem;
   font-weight: 400;
   line-height: 1.4;
   padding-left: .6em;
   padding-right: 1em;
 
   @media (min-width: 768px) {
-    font-size: 12px;
+    font-size: 1rem;
   }
 
   &:last-child {

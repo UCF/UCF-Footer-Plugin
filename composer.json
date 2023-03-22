@@ -1,0 +1,8 @@
+{
+    "name": "ucf/ucf-footer-plugin",
+    "description": "Provides styles and functionality for displaying a consistent branded footer bar for UCF sites.",
+    "type": "wordpress-plugin",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

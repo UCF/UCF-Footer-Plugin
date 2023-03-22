@@ -21,6 +21,10 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 ## Changelog ##
 
+### 2.0.1 ###
+Enhancements:
+* Added composer file.
+
 ### 2.0.0 ###
 Accessibility:
 * Updates font sizes from pixels to rem to more predictably scale text when the screen is zoomed.

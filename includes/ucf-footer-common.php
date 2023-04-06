@@ -31,7 +31,7 @@ if ( !class_exists( 'UCF_Footer_Common' ) ) {
 		?>
 			<ul class="ucf-footer-social">
 			<?php foreach ( $menu->items as $item ): ?>
-				<?php $xfn = ! empty( $item->xfn ) ? " rel=\"${ $item->xfn }\"" : ""; ?>
+				<?php $xfn = ! empty( $item->xfn ) ? " rel=\"$item->xfn\"" : ""; ?>
 				<li class="ucf-footer-social-item">
 					<a class="ucf-footer-social-link" href="<?php echo $item->url; ?>" target="<?php echo $item->target; ?>" aria-label="<?php echo $item->title; ?>"<?php echo $xfn; ?>></a>
 				</li>

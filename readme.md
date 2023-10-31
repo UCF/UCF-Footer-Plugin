@@ -21,6 +21,10 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 ## Changelog ##
 
+### 2.0.2 ###
+Enhancements:
+* Updated social icons changing twitter bird to X.
+
 ### 2.0.1 ###
 Enhancements:
 * Added composer file.

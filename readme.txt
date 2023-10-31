@@ -3,7 +3,7 @@ Contributors: ucfwebcom
 Tags: ucf, footer, template
 Requires at least: 4.9.6
 Tested up to: 6.1
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 Requires PHP: 5.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/copyleft/gpl-3.0.html
@@ -28,6 +28,10 @@ Provides styles and functionality for displaying a consistent branded footer bar
 
 
 == Changelog ==
+
+= 2.0.2 =
+Enhancements:
+* Updated social icons changing twitter bird to X.
 
 = 2.0.1 =
 Enhancements:

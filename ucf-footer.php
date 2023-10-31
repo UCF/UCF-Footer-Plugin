@@ -3,7 +3,7 @@
 Plugin Name: UCF Footer
 Description: Adds a UCF-branded footer to UCF sites.
 Github Plugin URI: UCF/UCF-Footer-Plugin
-Version: 2.0.1
+Version: 2.0.2
 Author: UCF Web Communications
 License: GPL3
 */
